@@ -113,6 +113,15 @@ async function remove(tracks: number | number[]): Promise<void> {
 }
 
 /**
+ * Removes all tracks from the queue.
+ */
+async function removeAllTracks(): Promise<void> {
+
+
+  return TrackPlayer.removeAllTracks();
+}
+
+/**
  * Clears any upcoming tracks from the queue.
  */
 async function removeUpcomingTracks(): Promise<void> {
