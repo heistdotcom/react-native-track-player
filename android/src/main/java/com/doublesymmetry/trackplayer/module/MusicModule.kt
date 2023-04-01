@@ -261,10 +261,7 @@ class MusicModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaM
                     val index = if (track is Int) track else track.toString().toInt()
 
                     // We do not allow removal of the current item
-                    if (index == currentIndex) {
-                        Timber.e("This track is currently playing, so it can't be removed")
-                        continue
-                    } else if (index >= 0 && index < queue.size) {
+                    if (index >= 0 && index < queue.size) {
                         musicService.remove(index)
                     }
                 }
