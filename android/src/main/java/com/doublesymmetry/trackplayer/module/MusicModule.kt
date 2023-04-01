@@ -390,7 +390,7 @@ class MusicModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaM
     @ReactMethod
     fun pause(callback: Promise) = scope.launch {
         if (verifyServiceBoundOrReject(callback)) return@launch
-
+        println("Inside React Pause")
         musicService.pause()
         callback.resolve(null)
     }

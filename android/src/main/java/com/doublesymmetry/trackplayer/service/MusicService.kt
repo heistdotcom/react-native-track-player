@@ -106,6 +106,7 @@ class MusicService : HeadlessJsTaskService() {
         options.getBoolean(STOPPING_APP_PAUSES_PLAYBACK_KEY).let {
             stoppingAppPausesPlayback = options.getBoolean(STOPPING_APP_PAUSES_PLAYBACK_KEY)
             if (stoppingAppPausesPlayback) {
+                println("Inside stoppingAppPausesPlayback")
                 appKilledPlaybackBehavior = AppKilledPlaybackBehavior.PAUSE_PLAYBACK
             }
         }
