@@ -259,7 +259,14 @@ class MusicService : HeadlessJsTaskService() {
 
     @MainThread
     fun removeAllTracks() {
-        player.reset()
+        removeUpcomingTracks()
+        removePreviousTracks()
+        try{
+          remove(0)
+        }
+        catch(ex: Exception){
+          println(ex)
+        }
     }
 
     @MainThread
